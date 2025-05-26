@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Porsche 911 GT2RS - Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header role="banner" aria-label="En-tête du site Porsche 911 GT2RS - page contact">
+    <h1>Porsche 911 GT2RS - Contact</h1>
+    <nav role="navigation" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html" aria-current="false">Accueil</a></li>
+        <li><a href="fiche-produit.html" aria-current="false">Fiche produit</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main" aria-labelledby="contact-title" tabindex="-1">
+    <h2 id="contact-title">Contactez-nous</h2>
+    <form action="contact.html" method="get" aria-describedby="form-desc" role="form" novalidate id="contactForm">
+      <p id="form-desc">Merci de remplir tous les champs pour que nous puissions vous contacter.</p>
+
+      <fieldset>
+        <legend>Informations personnelles</legend>
+
+        <label for="lastname">Nom :</label>
+        <input type="text" id="lastname" name="lastname" required aria-required="true"
+       pattern="^[A-Za-zÀ-ÿ\- ]{2,}$" title="Le nom doit contenir au moins 2 lettres et uniquement des lettres, espaces ou tirets." />
+
+        <label for="firstname">Prénom :</label>
+        <input type="text" id="firstname" name="firstname" required aria-required="true"
+       pattern="^[A-Za-zÀ-ÿ\- ]{2,}$" title="Le prénom doit contenir au moins 2 lettres et uniquement des lettres, espaces ou tirets." />
+
+        <label for="email">Adresse email :</label>
+        <input type="email" id="email" name="email" required aria-required="true"
+       pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$" title="Veuillez entrer une adresse email valide." />
+
+        <label for="phone">Numéro de téléphone :</label>
+        <<input type="tel" id="phone" name="phone" required aria-required="true"
+        pattern="^(\+33|0)[\s.-]?([1-9][\s.-]?){8}[0-9]$"
+        title="Entrez un numéro de téléphone français valide, exemple : 06 12 34 56 78 ou +33 6 12 34 56 78" /> 
+        <small id="phone-desc">Exemple : 0612345678</small>
+      </fieldset>
+
+      <fieldset>
+        <legend>Votre message</legend>
+
+        <label for="message">Message :</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          aria-required="true"
+          aria-invalid="false"
+        ></textarea>
+
+        <label for="timeslot">Plage horaire de contact souhaitée :</label>
+        <select id="timeslot" name="timeslot" required aria-required="true" aria-invalid="false">
+          <option value="">-- Sélectionnez une option --</option>
+          <option value="matin">Matin (9h - 12h)</option>
+          <option value="apres-midi">Après-midi (13h - 17h)</option>
+          <option value="soir">Soir (18h - 20h)</option>
+        </select>
+      </fieldset>
+
+      <button type="submit" aria-label="Envoyer le formulaire de contact">Envoyer</button>
+    </form>
+  </main>
+
+  <footer role="contentinfo" aria-label="Pied de page">
+    <p>&copy; 2025 Porsche Passion. Tous droits réservés.</p>
+    <nav role="navigation" aria-label="Navigation pied de page">
+      <ul>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="fiche-produit.html">Fiche produit</a></li>
+        <li><a href="fiche-produit.html#details-title">Définitions</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <div id="confirmationDialog" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="dialogTitle" aria-describedby="dialogDesc" tabindex="-1">
+    <div class="modal-content">
+      <h2 id="dialogTitle">Confirmation d’envoi</h2>
+      <p id="dialogDesc">Voulez-vous vraiment envoyer ce formulaire ?</p>
+      <div class="modal-buttons">
+        <button id="confirmBtn">Oui, envoyer</button>
+        <button id="cancelBtn">Annuler</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

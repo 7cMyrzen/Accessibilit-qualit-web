@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Porsche 911 GT2RS</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header role="banner" aria-label="En-tête du site Porsche 911 GT2RS">
+    <h1>Porsche 911 GT2RS</h1>
+    <nav role="navigation" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="fiche-produit.html" aria-current="false">Fiche produit</a></li>
+        <li><a href="contact.html" aria-current="false">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banniere" role="region" aria-label="Bannière d'accueil avec introduction">
+    <h2>Bienvenue chez Porsche Passion</h2>
+    <p>Plongez dans l’univers de la performance avec la 911 GT2RS.</p>
+  </section>
+
+  <main role="main" aria-labelledby="main-title" tabindex="-1">
+    <h2 id="main-title" class="sr-only">Contenu principal</h2>
+
+    <section id="description" role="region" aria-labelledby="desc-title">
+      <h3 id="desc-title">Description</h3>
+      <p>
+        La Porsche 911 GT2 RS est l’incarnation ultime de la performance pour la gamme 911.
+        Équipée d’un moteur flat-six biturbo de 700 chevaux, elle est conçue pour la piste tout
+        en restant homologuée pour la route.
+      </p>
+    </section>
+
+    <section id="media" role="region" aria-labelledby="media-title">
+      <h3 id="media-title">Galerie multimédia</h3>
+      <figure>
+        <img src="media/gt2rs.jpg" alt="Vue de face de la Porsche 911 GT2 RS" />
+        <figcaption>La 911 GT2RS</figcaption>
+      </figure>
+
+      <video controls aria-describedby="video-desc">
+        <source src="media/gt2rs.mp4" type="video/mp4" />
+        <track src="media/gt2rs-subtitles.vtt" kind="subtitles" srclang="fr" label="Français" default />
+        Votre navigateur ne prend pas en charge la vidéo.
+      </video>
+      <p id="video-desc" class="sr-only">Vidéo présentant la Porsche 911 GT2RS en action.</p>
+    </section>
+  </main>
+
+  <footer role="contentinfo" aria-label="Pied de page">
+    <p>&copy; 2025 Porsche Passion. Tous droits réservés.</p>
+    <nav role="navigation" aria-label="Navigation pied de page">
+      <ul>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="fiche-produit.html">Fiche produit</a></li>
+        <li><a href="fiche-produit.html#details-title">Définitions</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
